@@ -1,26 +1,26 @@
-import java.util.HashSet;
+import java.util.TreeSet;
 import java.util.Iterator;
 
 
-public class AddAndShowHashSet implements IAddAndShowElements
+public class AddAndShowTreeSet implements IAddAndShowElements
 {
-    private HashSet<Integer> hashSet;
+    private TreeSet<Integer> treeSet;
 
-    public AddAndShowHashSet(HashSet<Integer> hashSet_)
+    public AddAndShowTreeSet(TreeSet<Integer> hashSet_)
     {
-        hashSet = hashSet_;
+        treeSet = hashSet_;
     }
 
     @Override
     public void AddElement(Integer element)
     {
-        hashSet.add(element);
+        treeSet.add(element);
     }
 
     @Override
     public void ShowElements()
     {
-        Iterator<Integer> i = hashSet.iterator();
+        Iterator<Integer> i = treeSet.iterator();
         int counter = 1;
         while(i.hasNext())
         {
