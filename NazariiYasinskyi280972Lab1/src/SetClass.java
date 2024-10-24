@@ -1,26 +1,26 @@
-import java.util.TreeSet;
+import java.util.Set;
 import java.util.Iterator;
 
 
-public class AddAndShowTreeSet implements IAddAndShowElements
+public class SetClass implements IAddAndShowElements
 {
-    private TreeSet<Integer> treeSet;
+    private Set<Integer> set;
 
-    public AddAndShowTreeSet(TreeSet<Integer> hashSet_)
+    public SetClass(Set<Integer> set_)
     {
-        treeSet = hashSet_;
+        set = set_;
     }
 
     @Override
     public void AddElement(Integer element)
     {
-        treeSet.add(element);
+        set.add(element);
     }
 
     @Override
     public void ShowElements()
     {
-        Iterator<Integer> i = treeSet.iterator();
+        Iterator<Integer> i = set.iterator();
         int counter = 1;
         while(i.hasNext())
         {
