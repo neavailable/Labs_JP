@@ -144,7 +144,7 @@ public class Main {
         for (Map.Entry<String, Integer> entry : sortedMap.entrySet()) System.out.println("wartość: " + entry.getValue() + ", klucz: " + entry.getKey());
     }
 
-    private static void RunMainLoop()
+    private static void RunMainFunctions()
     {
         Exercise1();
         Exercise2();
@@ -153,6 +153,6 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        RunMainLoop();
+        RunMainFunctions();
     }
 }
