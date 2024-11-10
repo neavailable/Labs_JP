@@ -7,5 +7,5 @@ git clone https://github.com/neavailable/Labs_JP.git
 Jeśli chcesz zainstalować wybraną labę wklej komandę:
 
 ```
-git clone -b Lab'numer' https://github.com/neavailable/Labs_JP.git
+git clone -b Lab'numer laby' https://github.com/neavailable/Labs_JP.git
 ```
