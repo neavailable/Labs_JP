@@ -4,16 +4,17 @@ import java.awt.*;
 
 public class Window
 {
-    JFrame frame;
-    JPanel panel;
-    JLabel label1, label2;
-    JTextField textField1;
-    JPasswordField passwordField;
-    JButton buttonShowAll, buttonChangeSize, buttonMove, buttonEnterName;
-    final Color [] colors;
-    final String [] colorsName;
-    JComboBox changeColorBox;
-    JTextArea textArea;
+    private JFrame frame;
+    private JPanel panel;
+    private JLabel label1, label2;
+    private JTextField textField1;
+    private JPasswordField passwordField;
+    private JButton buttonShowAll, buttonChangeSize, buttonMove, buttonEnterName;
+    private final Color [] colors;
+    private final String [] colorsName;
+    private JComboBox changeColorBox;
+    private JTextArea textArea;
+
 
     public Window()
     {
@@ -61,9 +62,21 @@ public class Window
     private void ShowAll()
     {
         String name = textField1.getText();
-        String passcode = new String(passwordField.getPassword());
+        char[] passwordChars = passwordField.getPassword();
+        StringBuilder passwordBuilder = new StringBuilder();
 
-        textArea.setText("imię: " + name + "\nhasło: " + passcode);
+        for (char character : passwordChars) passwordBuilder.append(character);
+
+        if (new PasswordChecker(passwordChars).CheckPasscodeStrongness())
+        {
+            textArea.setText("imię: " + name + "\nhasło: " + passwordBuilder);
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(frame, "słabe hasło", "Ostrzeżenie", JOptionPane.WARNING_MESSAGE);
+        }
+
+        java.util.Arrays.fill(passwordChars, '\0');
     }
 
     private void ChangeColor()
