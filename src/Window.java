@@ -77,6 +77,7 @@ public class Window
         }
 
         java.util.Arrays.fill(passwordChars, '\0');
+        passwordBuilder.setLength(0);
     }
 
     private void ChangeColor()
