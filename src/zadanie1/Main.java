@@ -8,9 +8,9 @@ public class Main
 {
     public static void main(String[] args)
     {
-        final int width = 400, height = 100;
+        final int width = 500, height = 500;
         JFrame frame = new JFrame("zadanie 1");
-        JTextField textField = new JTextField("zadanie 1");
+        JTextField textField = new JTextField("");
         textField.setEditable(false);
 
         textField.addMouseListener
@@ -20,7 +20,7 @@ public class Main
             @Override
             public void mouseClicked(MouseEvent e)
             {
-                System.out.println("Kliknięcie na współrzędnych: X=" + e.getX() + ", Y=" + e.getY());
+                System.out.println("współrzędne: (" + e.getX() + ", " + e.getY() + ")");
             }
         }
                 );
